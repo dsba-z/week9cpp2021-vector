@@ -7,12 +7,6 @@ class Vector3D
     public:
     /* class methods */
     
-    private:
-    /* attributes */
-    double _x;
-    double _y;
-    double _z;
-    
     // Task 1, empty constructor
     Vector3D();
     
@@ -36,20 +30,24 @@ class Vector3D
         _x = x;
     }
     
-    
     // Task 8. Magnitude
     double magnitude() const;
+    
+    private:
+    /* attributes */
+    double _x;
+    double _y;
+    double _z;
+    
 };
-
 
 // Task 5. Operator +
 // (can be defined here or inside the class)
-Vector3D operator+ (const Vector3D& v1, Vector3D& v2);
-
+Vector3D operator+ (const Vector3D& v1, const Vector3D& v2);
 
 // Task 6. Operator * (dot product)
 // (can be defined here or inside the class)
-Vector3D operator* (const Vector3D& v1, Vector3D& v2);
+double operator* (const Vector3D& v1, const Vector3D& v2);
 
 // Task 7. Operator * (scalar product)
 // (can be defined here or inside the class)
@@ -63,7 +61,6 @@ bool operator<(const Vector3D& v1, const Vector3D& v2);
 // Task 10. Operator << (printing)
 // (can't be defined inside the class)
 // Use definition from previous workshops
-
 
 
 // Task 11. Operator >> (reading)
