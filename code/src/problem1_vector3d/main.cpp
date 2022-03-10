@@ -4,14 +4,8 @@
 
 class Vector3D
 {
-    public:
+public:
     /* class methods */
-    
-    private:
-    /* attributes */
-    double _x;
-    double _y;
-    double _z;
     
     // Task 1, empty constructor
     Vector3D();
@@ -39,6 +33,13 @@ class Vector3D
     
     // Task 8. Magnitude
     double magnitude() const;
+    
+    
+private:
+    /* attributes */
+    double _x;
+    double _y;
+    double _z;
 };
 
 
