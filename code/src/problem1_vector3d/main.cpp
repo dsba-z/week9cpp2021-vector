@@ -50,7 +50,7 @@ Vector3D operator+ (const Vector3D& v1, const Vector3D& v2)
 
 // Task 6. Operator * (dot product)
 // (can be defined here or inside the class)
-Vector3D operator* (const Vector3D& v1, const Vector3D& v2);
+double operator* (const Vector3D& v1, const Vector3D& v2);
 
 // Task 7. Operator * (scalar product)
 // (can be defined here or inside the class)
