@@ -1,6 +1,7 @@
 #include <iostream>
 #include <set>
 #include <random>
+#include <cmath>
 
 class Vector3D
 {
@@ -8,7 +9,11 @@ class Vector3D
     /* class methods */
     
     // Task 1, empty constructor
-    Vector3D();
+    Vector3D()
+        :_x(0),_y(0)
+    {
+        _x = 0;
+    }
     
     // Task 2, constructor with arguments
     Vector3D(double x, double y, double z);
@@ -39,11 +44,17 @@ class Vector3D
     double _y;
     double _z;
     
+    friend Vector3D operator+ (const Vector3D& v1, const Vector3D& v2);
+    
 };
 
 // Task 5. Operator +
 // (can be defined here or inside the class)
-Vector3D operator+ (const Vector3D& v1, const Vector3D& v2);
+Vector3D operator+ (const Vector3D& v1, const Vector3D& v2)
+{
+    double a = v1._x + v2._x;
+    Vector3D myVector;
+}
 
 // Task 6. Operator * (dot product)
 // (can be defined here or inside the class)
@@ -67,6 +78,9 @@ bool operator<(const Vector3D& v1, const Vector3D& v2);
 std::istream& operator>> (std::istream& in, Vector3D& v1)
 {
     // read vector data
+    double a;
+    in >> a;
+    v1.setX(a);
     
     return in;
 }
@@ -87,6 +101,14 @@ void fillMultiset(size_t n, std::multiset<Vector3D>& mset)
 }
 
 
+
+void exampleFunction(Vector3D a)
+{
+    std::cout << a.getX()
+}
+
+
+
 int main()
 {
 
@@ -95,8 +117,11 @@ int main()
     std::multiset<Vector3D> s;
     const size_t setSize = 100;
     fillMultiset(100, s);
+    Vector3D vec1;
+    Vector3D vec2;
     
-    
+    std::cin >> vec1 >> vec2;
+//         std::cin    >> vec2;
     // Part 2. Print all elements of the multiset
     // printMultiSet(s);
     
